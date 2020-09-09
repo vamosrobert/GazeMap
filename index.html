@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <title>GazeMap</title>
+    <link rel="icon" href="./img/favicon.png" />
+    <!-- Bootstrap -->
+
+    <link
+      rel="stylesheet"
+      href="./bootstrap-4.0.0-dist/css/bootstrap.min.css"
+    />
+
+    <!-- Our Custom CSS -->
+    <link rel="stylesheet" href="./css/style.css" />
+    <!-- Leaflet -->
+    <link rel="stylesheet" href="./leaflet/leaflet.css" />
+    <script src="./leaflet/leaflet-src.js"></script>
+  </head>
+  <body class="bg-dark">
+    <div class="wrapper h-100 w-100" id="page">
+      <!-- Nav BAR -->
+      <div class="container-fluid" id="navbar">
+        <nav class="navbar navbar-dark bg-dark h-10 p-0 m-0">
+          <a class="navbar-brand p-2 m-0 ml-4" href="#">
+            <img src="./img/output-onlinepngtools.png" alt="logo" />
+          </a>
+          <form class="form-inline">
+            <input
+              class="form-control custom-select mr-sm-2"
+              list="countryList"
+              placeholder="Search"
+              id="inputValue"
+              autocomplete="off"
+              ;
+            />
+            <datalist id="countryList"></datalist>
+            <button id="btn" style="display: none;"></button>
+          </form>
+        </nav>
+      </div>
+
+      <!-- Side bar & Map Div-->
+
+      <div class="container-fluid m-0 p-0" id="sidebarContainer">
+        <div class="row m-0 p-0 h-100">
+          <!-- SideBar -->
+          <div class="col-sm-4 m-0 p-0">
+            <nav class="navbar navbar-dark" style="background-image: inherit;">
+              <button
+                class="navbar-toggler"
+                type="button"
+                data-toggle="collapse"
+                style="visibility: hidden; display: none;"
+                data-target="#navbarToggleExternalContent"
+                aria-controls="navbarToggleExternalContent"
+                aria-expanded="true"
+                aria-label="Toggle navigation"
+              >
+                <span class="navbar-toggler-icon"></span>
+              </button>
+            </nav>
+            <div class="pos-f-t">
+              <div class="collapse show" id="navbarToggleExternalContent">
+                <div class="bg-dark pl-3 pr-3 pb-4" id="info"></div>
+              </div>
+            </div>
+          </div>
+          <!-- Map Div -->
+          <div class="col-sm-8 m-0 p-0" id="mapContainer">
+            <div id="myMap"></div>
+          </div>
+        </div>
+      </div>
+      <!-- FOOTER -->
+
+      <div
+        class="navbar navbar-dark bg-dark pt-0 pb-0 pl-3 fixed-bottom h-7"
+        id="footerContainer"
+      >
+        <div class="btn-group dropup" id="footer">
+          <select class="btn btn-dark" id="weatherSelect">
+            <option value="off">Weather - Off</option>
+            <option value="clouds_new">Cloud Cover</option>
+            <option value="precipitation_new">Precipitation</option>
+            <option value="pressure_new">Pressure</option>
+            <option value="wind_new">Wind Speeds</option>
+            <option value="temp_new">Temperature</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- End of wrapper -->
+    </div>
+
+    <!-- jQuery CDN  -->
+    <script src="./js/jquery-3.3.1.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="./bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
+    <script src="./js/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,106 @@
+/* Reset */
+html,
+body {
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.container-fluid {
+  padding: 0 !important;
+}
+
+.h-10 {
+  height: 10vh !important;
+}
+.h-7 {
+  height: 7vh !important;
+}
+
+/* Content */
+
+/* NavBar logo and input field */
+
+#navbar {
+  box-shadow: 0 4px 2px -2px #05828e;
+}
+
+/* Sidebar Css */
+
+#sidebarContainer {
+  position: relative !important;
+  height: 83vh !important;
+  height: 100% !important;
+  border-right: 1px solid #05828e;
+}
+#info {
+  overflow-block: initial;
+  overflow-y: auto;
+  height: 100%;
+}
+
+/* Map Css */
+
+#myMap {
+  height: 100%;
+  width: 99%;
+}
+
+/* Footer CSS */
+
+#footerContainer {
+  border-top: 1px solid #05828e;
+  height: auto;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+#inputValue {
+  border: 1px solid #05828e;
+  border-radius: 20px !important;
+  background: rgb(59, 58, 58);
+  color: #05828e;
+}
+.bg-dark {
+  background: #322f3d;
+}
+/*  Media Query  */
+
+@media screen and (max-width: 600px) {
+  /* Logo + search input */
+  #navbar .navbar .navbar-dark .bg-dark {
+    display: flex;
+    justify-content: space-between;
+  }
+  .navbar-toggler {
+    display: block;
+  }
+  #navbar .navbar-brand {
+    width: 40%;
+  }
+  #navbar .navbar-brand img {
+    width: 90%;
+  }
+  #navbar .form-inline {
+    width: 40%;
+  }
+  #navbar .form-inline input {
+    width: 90%;
+    height: 70%;
+  }
+  /* Side bar and Map div */
+  #sidebarContainer .row #info {
+    height: 30vh;
+    overflow-y: auto;
+  }
+  #sidebarContainer .row #mapContainer {
+    height: 100%;
+    overflow-y: auto;
+  }
+}
+
+.leaflet-popup-content,
+.leaflet-popup-content-wrapper {
+  background-color: #322f3d !important;
+  background: #322f3d !important;
+}
